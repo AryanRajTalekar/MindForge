@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.hero-section{
+    margin-top: 2vw;
+    /* border: 2px solid black; */
+}
+
+
+.head1{
+
+    margin-left: -10vw;
+    /* border: 2px solid black; */
+
+}
+
+.head2{
+    margin-left: 10vw;
+    /* border: 2px solid black; */
+
+}
+
+.para1{
+ margin-top: 3vw;
+ margin-left:-5vw;
+}
+
+
+
+.hero-video {
+    margin-top: 1vw;
+    width: 50%;
+    /* margin-right: 10px; */
+    margin-left: 3vw;
+    height: 27vw;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers full div */
+}
+
+.borderline{
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.getstartedbutton{
+    margin-top: 5vw;
+    margin-left: -10vw;
+}
+
+.getstartedbutton:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+
+.page2{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.scrolling-container {
+    display: flex;
+    white-space: nowrap;
+    margin-top: 4vw;
+    width: 100%;
+    overflow: hidden;  /* Ensures no scrollbar appears */
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar in WebKit browsers */
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none;  /* Hide scrollbar in IE & Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+  }
+
+  .collab-head{
+    margin-top:2vw;
+  }
+  
+
+  .coursehead{
+    margin-left: 3vw;
+    margin-top: 1vw;
+  }
+
+  .coursehead3{
+    margin-left: 3vw;
+    margin-top: 1vw;
+  }
+
+  
+
+  .courses1{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    
+  }
+
+  .courses2{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+ .image-container img{
+  margin-left: 5vw;
+  margin-top: 3vw;
+ }
+
+ .learner-outcome {
+  margin-top: 3vw;
+ }
+
+ .learner-heading{
+  padding: 4vw;
+ }
+
+

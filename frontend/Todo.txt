@@ -1,0 +1,67 @@
+
+
+
+c{
+  title: "",  // Course title
+  description: "",  // Detailed course description
+  category: "Technology",  // Course category (Technology, Business, etc.)
+  price: "free",  // "free" | "one-time" | "subscription"
+  certificate: false,  // Boolean (true = certificate provided)
+  syllabusPDF: "",  // URL to uploaded syllabus PDF
+  publishDate: "",  // Date when course is published
+  language: "English",  // Language of the course
+  difficulty: "Beginner",  // Beginner | Intermediate | Advanced
+  tags: ["React", "MERN", "Web Dev"],  // Keywords for search
+  instructor: {
+    name: "Aryan Talekar",
+    profilePic: "url-to-profile-pic",
+    bio: "Experienced web developer...",
+  },
+  studentsEnrolled: 0,  // Count of enrolled students
+  modules: [
+    {
+      title: "Module 1",
+      lessons: [
+        {
+          title: "Lesson 1",
+          videoURL: "https://youtube.com/...",
+          duration: "15 min",
+          resources: ["pdf-link", "code-repo"],
+          quiz: {
+            questions: [
+              {
+                question: "What is React?",
+                options: ["Library", "Framework", "Language", "None"],
+                correctAnswer: "Library",
+              },
+            ],
+          },
+        },
+      ],
+    },
+  ],
+  ratings: {
+    averageRating: 4.5,
+    reviews: [
+      {
+        student: "John Doe",
+        comment: "Great course!",
+        rating: 5,
+      },
+    ],
+  },
+  status: "draft", // "draft" | "published" | "archived"
+}
+
+Field	Why It's Useful?
+syllabusPDF	Lets students download course syllabus
+publishDate	Helps track course release & scheduling
+language	Allows multi-language course filtering
+difficulty	Helps students find courses based on skill level
+tags	Improves searchability & recommendations
+instructor info	Shows course creator details
+studentsEnrolled	Tracks course popularity
+videoURL in lessons	Supports video-based lessons
+quiz in lessons	Adds interactive learning
+ratings & reviews	Helps students judge course quality
+status	Helps in managing course drafts & publishing

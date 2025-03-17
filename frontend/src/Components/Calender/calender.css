@@ -1,0 +1,42 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure it fits inside the panel */
+    max-width: 20vw; 
+    /* margin-top: 0.2vw; */
+    height: 25vw;
+    overflow: hidden;
+  }
+
+  .calendar-container h2{
+    margin-left:1.5vw;
+  }
+  
+  .react-calendar {
+    width: 350px;
+    max-width: 100%;
+    background: #343450 ;
+    border-radius: 10px;
+    /* padding: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    color: white; /* White text */
+  }
+  
+  .dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2px;
+  }
+  
+  .green-dot {
+    background-color: green;
+  }
+  
+  .red-dot {
+    background-color: red;
+  }
+  

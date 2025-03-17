@@ -1,0 +1,15 @@
+
+.main-container{
+    margin-top: 0.7vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.todo-head{
+    margin-top: -1vw;
+}
+
+.main-todo{
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
