@@ -12,12 +12,14 @@
   import TodoList from "../../Components/todolist_component/todolist";
   import { SlArrowRight } from "react-icons/sl";
   import { FaStar } from "react-icons/fa";
-  import AdminStats from "./AdminStats";
+  
   import Course_Creation from "../../Components/Course_Creation/Course_Creation";
   import CourseTrendGraph from "../../Components/Graph/CoursetrendGraph";
-  import "./Admin.css";
+  import MostPopularCourses from "../../Components/CourseTypes/MostPopularCourses";
+  import NewCourses from "../../Components/CourseTypes/NewCourses";
+  
 
-  const Admin = () => {
+  const Instructor = () => {
 
 
 
@@ -25,41 +27,19 @@
   
 
 
-    const my_courses = [
-      {
-        title: "Introduction to Web Development",
-        description: "Learn to build websites and web applications using the latest technologies.",
-        difficulty: "Beginner Friendly",
-        duration: "3 Hours",
-        type: "Free Course",
-      },
-      {
-        title: "Advanced JavaScript",
-        description: "Deep dive into JavaScript concepts and best practices.",
-        difficulty: "Intermediate",
-        duration: "5 Hours",
-        type: "Premium Course",  
-      },
-      {
-        title: "React Basics",
-        description: "Get started with React.js and build interactive UIs.",
-        difficulty: "Beginner",
-        duration: "4 Hours",
-        type: "Free Course", 
-      }
-    ];
+    
 
 
     const [activeSection, setActiveSection] = useState("dashboard");
 
-    const admin_name = "Aryan";
+    const Instructor_name = "Aryan";
     console.log("Active Section:", activeSection);
 
     return (
-      <div className="admin-container flex bg-gray-100">
+      <div className="instructor-container flex bg-gray-100 min-h-screen">
         {/* Sidebar */}
-        <div className="sidebar flex flex-col items-center justify-evenly w-[20%] h-80 rounded-lg  min-h-screen bg-gray-200">
-        <div className="admin-dashboard-head w-full h-[4vw]  flex items-center justify-center text-3xl gap-2 underline decoration-yellow-500"><MdAdminPanelSettings color="orange" /><h1 className="text-3xl font-semibold">Admin Dashboard</h1></div>
+        <div className="sidebar fixed flex flex-col items-center justify-evenly w-[20%] h-80 rounded-lg  min-h-screen bg-gray-200">
+        <div className="Instructor-dashboard-head w-full h-[4vw] flex items-center justify-center text-3xl gap-2 underline decoration-yellow-500"><MdAdminPanelSettings color="orange" /><h1 className="text-2xl font-semibold">Instructor Dashboard</h1></div>
           
           
           <button onClick={() => setActiveSection("dashboard")}
@@ -131,61 +111,38 @@
 
 
         {/* Main Content */}
-        <div className="main-content flex-1 p-6 ">
+        <div className="main-content flex-1 p-6 ml-[20vw] min-h-screen">
             <div className="">
             {activeSection === "dashboard" && (
-              <div className="admin-dashboard-content  w-full h-screen">
-                <p className="admin-dashboard-para text-lg font-semibold">Welcome to the MindForge Admin Dashboard,<span className="font-bold">{admin_name}</span>!!!</p>
-              <div className="courses_created_by_admin  w-full h-[25vw]">
+              <div className="admin-dashboard-content  w-full h-screen  border-yellow-600">
+                <p className="admin-dashboard-para text-2xl font-semibold ml-[2vw] mb-[2vw]">Welcome to Instructor Dashboard <span className="font-bold"> {Instructor_name}👋</span>!!!</p>
+              <div className="courses_created_by_instructor  w-full h-screen">
                 
-                <h3 className='coursehead3 text-center font-bold '><span className='text-blue-600'>Your Most Popular Courses:-</span></h3>
-                            
-                      
-                        <div className="courses1 w-full h-[10vw]  flex items-center justify-evenly">
-                        {my_courses.map((course, index) => (
-                        <button onClick={()=>{
-                          console.log("Course Clicked:", course.title);
-                        }} key={index} className="group course-panel border-3 rounded-lg border-yellow-300 h-[18vw] w-[15vw] flex flex-col 
-                        transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-500">
+                
+                
+                <div className="">
+                <div className="courses-section-head flex flex-col items-center mb-[1vw]">
+      
+       <h3 className='coursehead3 font-bold mb-[2vw]'>Explore Your <span className='text-blue-600'>MOST POPULAR COURSES</span></h3>
+
+        </div>
+                  <MostPopularCourses/>
+                </div>
+
+                        {/* line seperation div */}
+                        <div className="line border border-orange-500 mb-[2vw] mt-[2vw]"></div>
+
+
+                <div className="">
+                <div className="courses-section-head flex flex-col items-center mb-[1vw]">
+      
+      <h3 className='coursehead3 font-bold mb-[2vw]'>Explore our <span className='text-blue-600'>NEWEST COURSES</span>, focused on delivering in-demand skills</h3>
+
+       </div>
+       <NewCourses/>
+                </div>
                         
-                        <h3 className="text-sm font-semibold bg-orange-300 rounded-t-sm flex justify-center py-2 
-                          border border-transparent transition-all duration-300 ease-in-out 
-                          group-hover:bg-blue-500">
-                          {course.type} 
-                        </h3>
-                      
-                
-                
-                          {/* Content */}
-                          <div className="course-panel-content flex flex-col flex-grow px-3 py-2">
-                            <h1 className="course-panel-heading text-lg font-bold text-center h-[3vw] flex items-center justify-center">
-                              {course.title}
-                            </h1>
-                            <p className="course-panel-para text-sm text-center flex-grow h-[5vw] overflow-hidden">
-                              {course.description}
-                            </p>
-                            <div className="line border-1 border-dashed my-2"></div>
-                
-                            {/* Bottom Section */}
-                            <div className="flex justify-evenly items-center">
-                              <h3 className="course-panel-difficulty text-sm font-semibold rounded-b-sm flex justify-center">
-                                {course.difficulty}
-                              </h3>
-                              <div className="course-duration-panel text-sm font-semibold">{course.duration}</div>
-                            </div>
-                          </div>
-                        </button>
-                      ))}
-                        </div>
-                        {/* Button to all courses page */}
-                        <div className="All_courses_btn w-full h-[3vw]  flex justify-end">
-                          <button className='text-sm font-semibold bg-blue-400  rounded flex items-center justify-end w-[15vw]  text-black-500 transition-all ease-in-out transform hover:scale-120 hover:bg-green-300'>View All Courses you have Created<SlArrowRight/></button>
-                        </div>
-                        <div className="line border border-orange-500"></div>
                     
-              </div>
-              <div className=" flex">
-              <AdminStats/>
               </div>
               
              
@@ -225,8 +182,8 @@
               <p className="text-xl font-semibold">Track performance and engagement.</p>
               </div>
               
-              <div className="graph-container  w-full h-[30vw]">
-              <AdminStats/>
+              <div className="graph-container w-full h-[30vw]">
+              
               <CourseTrendGraph/>
               
               </div>
@@ -265,4 +222,4 @@
     );
   };
 
-  export default Admin;
+  export default Instructor;

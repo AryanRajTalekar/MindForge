@@ -4,7 +4,10 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/contactpage";
 import Footer from "./Components/Footer/Footer";
-import AdminDashboard from "./Pages/Admin/Admin";
+import InstructorDashboard from "./Pages/Instructor/Instructor";
+import SignUpPage from "./Pages/SignUpPage";
+
+
 
 
 const App = () => {
@@ -13,11 +16,13 @@ const App = () => {
 
   return (
     <>
+        
        {!isAdminRoute && <Navbar />}
       <Routes>  
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin-dashboard" element={<InstructorDashboard />} />
         {/* <Route path="/my-courses" element={<MyCourses />} /> */}
         {/* <Route path="/profile-setting" element={<ProfileSetting />} /> */}
         {/* <Route path="/quizzes" element={<Quizzes />} /> */}

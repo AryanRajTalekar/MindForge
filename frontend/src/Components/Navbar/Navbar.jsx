@@ -2,10 +2,16 @@ import React from "react";
 import { NavLink } from 'react-router-dom'
 import { FaAward } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 import './Navbar.css'
 
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+  const handleClick = ()=>{
+    navigate('/signup');
+  }
  
 
 
@@ -66,13 +72,14 @@ const Navbar = () => {
           </NavLink></li>
         </ul>
 
-        <button className="signup ml-6 bg-orange-400 text-black rounded-[6vw] w-[10vw]  hover:bg-blue-500 shadow-lg hover:shadow-xl transition-all">
+        <button onClick={handleClick} className="signup ml-6 bg-orange-400 text-black rounded-[6vw] w-[10vw]  hover:bg-blue-500 shadow-lg hover:shadow-xl transition-all">
           Sign Up
         </button>
 
       </div>
       
     </div>
+    <div className="w-[80vw] ml-[10vw] border-1"></div>
     </>
   )
 }

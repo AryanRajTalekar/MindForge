@@ -1,5 +1,4 @@
 import React from 'react'
-import './testimonials.css' 
 import Circle_kenia from '../../assets/Circle_kenia.png'
 import Circle_Ryan from '../../assets/Circle_Ryan.png'
 import Vishal_Verma from '../../assets/Vishal_Verma.png'
@@ -35,7 +34,7 @@ const testimonials = () => {
         <div className="people-responses w-full h-[30vw]  flex justify-evenly items-center">
             {responses_about_app.map((response,index)=>(
                 <div key={index} className="response-panel w-[14vw] h-[25vw] flex flex-col items-center justify-center ">
-                    <img src={response.image} alt={response.name} className="border-2 border-yellow-300 w-30 h-30 rounded-full object-cover  transition-all duration-300 ease-in-out transform hover:scale-150 hover:border-blue-500" />
+                    <img src={response.image} alt={response.name} className="border-2 border-yellow-300 w-30 h-30 rounded-full object-cover  transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-500" />
                     <h1 className=' text-xl font-semibold'>{response.name}</h1>
                     <h3 className='response text-sm font-semibold'>{response.response} from {response.country}</h3>
                     <h3 className='text-md font-semibold text-yellow-600'>Rating: {response.rating}</h3>

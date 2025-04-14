@@ -46,10 +46,9 @@ const Home = () => {
 
   return (
     <>
-    <div className="line w-full border-1 border-gray-200"></div>
     <div className="main-container flex">
       
-      <div className="hero-section w-1/2 h-[30vw] relative flex flex-col items-center justify-center ">
+      <div className="hero-section w-1/2 h-[30vw] relative flex flex-col items-center justify-center mt-2 ">
       <h1 ref={heading1Ref} className="head1 text-6xl font-[Grechen_Fuemen] w-[60vw] text-center ">
         Empowering <span className='text-yellow-500'>Minds</span> ,
       </h1>
