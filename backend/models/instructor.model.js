@@ -30,8 +30,9 @@ const InstructorSchmema = new mongoose.Schema({
     socketId:{
         type:String,
         default:null
-    }
-})
+    },
+    
+},{timestamps:true})
 
 InstructorSchmema.methods.generateAuthToken = async function(){
     const token = JsonWebToken.sign({user_id:this.user_id},process.env.JWT_secret_key,{expiresIn:'2h'});
