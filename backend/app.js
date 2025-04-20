@@ -8,7 +8,7 @@ const connectDB = require("./db/db");
 const userRoutes = require("./Routes/user.route");
 
 
-
+const instructorRoutes = require("./Routes/instructor.route");
 
 
 connectDB();
@@ -21,13 +21,8 @@ app.use(express.urlencoded({extended:true}));
 
 
 
-app.get('/',(req,res)=>{
-    res.send("Hello World")
-})
-
-
-
 app.use('/users',userRoutes)
+app.use('/instructors',instructorRoutes)
 
 
 module.exports = app;
